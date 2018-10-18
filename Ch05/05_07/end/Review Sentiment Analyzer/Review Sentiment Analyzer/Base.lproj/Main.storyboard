@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review Analyzer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Review Analyzer" id="BYZ-38-t0r" customClass="ViewController" customModule="Review_Sentiment_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-JO-s2O">
+                                <rect key="frame" x="0.0" y="65" width="375" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7oa-C9-Z9E"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Sentiment Analyzer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Za-yH-DfI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-Td-eDI">
+                                <rect key="frame" x="155.5" y="591" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6FY-0W-e5K"/>
+                                    <constraint firstAttribute="width" constant="64" id="mTo-SS-4ag"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-ZF-IUg">
+                                <rect key="frame" x="343" y="73" width="24" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="H5c-sM-NLi"/>
+                                    <constraint firstAttribute="height" constant="24" id="NiR-XZ-yWr"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="clear">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQf-BZ-mdZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2e4-Td-eDI" firstAttribute="top" secondItem="YjR-JO-s2O" secondAttribute="bottom" constant="12" id="BIp-sj-xbR"/>
+                            <constraint firstItem="1Za-yH-DfI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Jds-6l-v2v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Za-yH-DfI" secondAttribute="trailing" id="NSd-i7-BYP"/>
+                            <constraint firstItem="YjR-JO-s2O" firstAttribute="top" secondItem="1Za-yH-DfI" secondAttribute="bottom" constant="12" id="S4B-he-R9M"/>
+                            <constraint firstItem="ZEE-ZF-IUg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="VKw-xK-NoA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEE-ZF-IUg" secondAttribute="trailing" constant="8" id="WbK-yO-Bcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YjR-JO-s2O" secondAttribute="trailing" id="ZBk-O5-036"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2e4-Td-eDI" secondAttribute="bottom" constant="12" id="byH-yj-fPb"/>
+                            <constraint firstItem="1Za-yH-DfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ojV-rZ-IQv"/>
+                            <constraint firstItem="2e4-Td-eDI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qJO-zu-bIk"/>
+                            <constraint firstItem="YjR-JO-s2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sTD-vH-T0D"/>
+                            <constraint firstItem="ZEE-ZF-IUg" firstAttribute="top" secondItem="YjR-JO-s2O" secondAttribute="top" constant="8" id="uhz-Us-RtE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="clearButton" destination="ZEE-ZF-IUg" id="AHs-VA-116"/>
+                        <outlet property="sentimentImageView" destination="2e4-Td-eDI" id="Rc9-6u-FBW"/>
+                        <outlet property="textView" destination="YjR-JO-s2O" id="pId-76-tP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="-83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear" width="180" height="180"/>
+        <image name="neutral" width="180" height="180"/>
+    </resources>
+</document>
