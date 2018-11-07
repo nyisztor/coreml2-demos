@@ -1,7 +1,7 @@
 # Machine Learning with Core ML 2 and Swift
 ## Source Code
 
-The book is available **[Amazon](https://www.amazon.com/dp/B07F2NYDTH)**. 
+The book is available on **[Amazon](https://www.amazon.com/dp/B07F2NYDTH)**. 
 Video course version coming soon.
 
 ***
