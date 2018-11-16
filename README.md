@@ -2,7 +2,7 @@
 ## Source Code
 
 The book is available on **[Amazon](https://www.amazon.com/dp/B07F2NYDTH)**. 
-Video course version coming soon.
+The companion video course is available on **[Udemy](https://www.udemy.com/machine-learning-with-core-ml-2-and-swift/?couponCode=GITHUB)**.
 
 ***
 ![](http://www.leakka.com/wp-content/uploads/2018/10/ml-cover-420w-1.png)
