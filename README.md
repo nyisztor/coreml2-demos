@@ -1,4 +1,4 @@
-# Machine Learning with Core ML 2 and Swift
+# Machine Learning with Core ML 2 and Swift 5
 ## Source Code
 
 The book is available on **[Amazon](https://www.amazon.com/dp/B07F2NYDTH)**. 
