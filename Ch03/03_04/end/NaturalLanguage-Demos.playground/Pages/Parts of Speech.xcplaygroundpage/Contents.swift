@@ -23,14 +23,19 @@ let text = "Knowledge will give you power, but character respect."
 let tagger = NLTagger(tagSchemes: [.lexicalClass, .language, .script])
 tagger.string = text
 
+var output = ""
+
+//: ## Note that NLTagger's enumerateTags() and tags() methods are broken at the moment, and they'll return 'OtherWord' for everything. I've submitted a bug report to Apple. I'll let you know as soon as they solve the issue.)
 tagger.enumerateTags(in: text.startIndex..<text.endIndex,
                      unit: NLTokenUnit.word,
                      scheme: NLTagScheme.lexicalClass,
                      options: [.omitPunctuation, .omitWhitespace]) { (tag, range) -> Bool in
-                        print(text[range])
-                        print(tag?.rawValue ?? "unknown")
-                        return true
+    // Append each pair to the output string
+    output += "\(text[range])(\(tag?.rawValue ?? "unknown")) "
+    
+    return true
 }
 
-
+print(output)
+ 
 //: [Next](@next)

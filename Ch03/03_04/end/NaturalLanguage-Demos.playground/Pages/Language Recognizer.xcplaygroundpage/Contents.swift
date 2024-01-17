@@ -32,6 +32,6 @@ let languageRecognizer = NLLanguageRecognizer()
 languageRecognizer.processString(string)
 let languagesWithProbabilities = languageRecognizer.languageHypotheses(withMaximum: 3)
 for (language, probability) in languagesWithProbabilities {
-    print("Detected \(language.rawValue.uppercased()), probability \(probability)")
+    print("Detected \(language.rawValue.uppercased()), probability \(String(format: "%.3f", probability * 100))%)")
 }
 languageRecognizer.reset()
