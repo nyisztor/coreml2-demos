@@ -23,11 +23,15 @@ let text = "Steve Jobs, Steve Wozniak, and Ronald Wayne founded Apple Computer i
 let tagger = NLTagger(tagSchemes: [NLTagScheme.nameTypeOrLexicalClass])
 tagger.string = text
 
+var output = ""
+//: ## Note that NLTagger's enumerateTags() and tags() methods are broken at the moment, and they'll return 'OtherWord' for everything. I've submitted a bug report to Apple. I'll let you know as soon as they solve the issue.)
 tagger.enumerateTags(in: text.startIndex..<text.endIndex,
                      unit: NLTokenUnit.word,
                      scheme: NLTagScheme.nameTypeOrLexicalClass,
                      options: [.omitPunctuation, .omitWhitespace, NLTagger.Options.joinNames]) { (tag, range) -> Bool in
-                        print(text[range])
-                        print(tag?.rawValue ?? "unknown")
+    // Append each pair to the output string
+    output += "\(text[range])(\(tag?.rawValue ?? "unknown")) "
                         return true
 }
+
+print(output)

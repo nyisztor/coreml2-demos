@@ -20,13 +20,13 @@ let text = "Knowledge will give you power, but character respect."
 //let text = "אין עשן בלי אש"
 //let text = "读书须用意，一字值千金"
 
-let tagger = NLTagger(tagSchemes: [NLTagScheme.tokenType])
+let tagger = NLTagger(tagSchemes: [.tokenType])
 tagger.string = text
 
 tagger.enumerateTags(in: text.startIndex..<text.endIndex,
-                     unit: NLTokenUnit.word,
-                     scheme: NLTagScheme.tokenType,
-                     options: [.omitPunctuation, .omitWhitespace]) { (tag, range) -> Bool in
+                     unit: .word,
+                     scheme: .tokenType,
+                     options: [.omitPunctuation, .omitWhitespace]) { tag, range -> Bool in
     print(text[range])    
     return true
 }
